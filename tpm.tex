@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{textcomp}
+\usepackage{fix-cm}
+\usepackage{float}
+\usepackage{biblatex}
+\usepackage{setspace}
+\usepackage[table]{xcolor}
+\definecolor{light-gray}{gray}{0.75}
+\usepackage{booktabs}
+\usepackage{listings}
+\author{Contzen Laurent}
+\bibliography{tpm.bib}
+\onehalfspacing
+\begin{document}
+
+\begin{titlepage}  
+  \begin{flushleft}
+    Contzen Laurent
+  \end{flushleft}
+  \begin{center}
+    \vspace{82mm}\LARGE{\textbf{Interrogation de bases de données en langage naturel – Application au domaine de l’édition.} \\    
+      Travail Préparatoire au Mémoire}
+  \end{center}
+  \begin{flushright}
+    \vspace{92mm}
+    Année Académique 2011-2012.             
+  \end{flushright}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Description du projet de mémoire}
+Implémentation d’un logiciel ayant pour but de permettre  à un utilisateur de poser une question en langage naturel et d’obtenir, s’il en existe une, une réponse dans le même langage naturel. La question sera traitée afin d’en extraire les informations utiles et ces dernières seront ensuite confrontées à une base de données dont l’architecture sera l’objet d’une étude détaillée. Les informations extraites de cette base de données seront ensuite reformulées en langage naturel. Le domaine d’application sera celui des livres et/ou des films. Ce mémoire mêlera donc ingénierie linguistique et bases de données.
+
+\newpage
+\section{Sources}
+\nocite{*}
+\printbibliography
+
+\end{document}
