@@ -76,7 +76,22 @@ Une fois les schémas de la base de données mis en place il sera temps de peupl
 
 \section{Plan de travail}
 
-\section{Description du projet de mémoire}
+\section{Notes variées}
+Cette section ne sera pas dans le travail final mais la plupart des informations contenues ici se retrouveront probablement autre part dans le travail.
+\subsection{Partie Ingénierie Linguistique}
+Après un rendez vous avec Max De Wilde afin de préparer cette partie, nous sommes arrivés aux conclusions suivantes :
+\begin{itemize}
+  \item IMDB offre la possibilité de télécharger le contenu de leur base de données en plain text et il existe plusieurs sites offrant une API permettant d'interagir avec ces données. Se limiter aux films dans un premier temps comme domaine d'application semble déjà conséquent et suffisant.
+  \item Il y a pas mal d'informations interessantes sur le sujet ou pouvant être liées au sujet dans le cours en ligne actuellement donné par l'université de stanford (NLP class), c'est une bonne source.
+  \item On partirait sur deux méthodes d'interrogation de la base de données pour l'utilisateur. La première utiliserait un formalisme que l'utilisateur devrait respecter (par exemple actor=''<nom>'') alors que la seconde serait plus libre. Il sera alors possible et interessant de comparer les résultats des deux méthodes. Le formalisme serait bien évidement plus intuitif que les techniques standard d'interrogation de bases de données ou de recherche documentaire actuelles.
+  \item Il faudra bien définir les types d'entités que l'on désire reconnaître dans les questions. Partir sur un base de Noms de films, noms de personnes, et années parait être un bon début.
+  \item Il faudrait réussir à différencier les acteurs, réalisateurs, personnages, etc.
+  \item Le formalisme permettra clairement une granularité de recherche plus précise.
+  \item Il faudra définir un ordre d'application dans le mapping.
+  \item Il est envisageable d'utiliser l'API d'OpenCalais afin de vérifier certains résultats. Malheureusement contrairement au nom ce service n'est pas open-source.
+\end{itemize}
+
+\subsection{Description du projet de mémoire}
 Implémentation d’un logiciel ayant pour but de permettre  à un utilisateur de poser une question en langage naturel et d’obtenir, s’il en existe une, une réponse dans le même langage naturel. La question sera traitée afin d’en extraire les informations utiles et ces dernières seront ensuite confrontées à une base de données dont l’architecture sera l’objet d’une étude détaillée. Les informations extraites de cette base de données seront ensuite reformulées en langage naturel. Le domaine d’application sera celui des livres et/ou des films. Ce mémoire mêlera donc ingénierie linguistique et bases de données.
 
 \section{Conclusion}
