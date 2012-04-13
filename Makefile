@@ -4,9 +4,9 @@ all: $(PDF)
 
 %.pdf: %.tex %.aux
 	@echo [LATEX] $< -\> $@
-	@pdflatex $< > /dev/null
-	@bibtex $*.aux > /dev/null
-	@pdflatex $< > /dev/null
-	@pdflatex $< > /dev/null
+	@pdflatex $<
+	@bibtex $*.aux
+	@pdflatex $<
+	@pdflatex $<
 clean:
 	rm $(PDF)
