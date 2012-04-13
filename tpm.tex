@@ -15,6 +15,8 @@
 \usepackage{biblatex}
 \usepackage{setspace}
 \usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{listings}
 \definecolor{light-gray}{gray}{0.75}
 \definecolor{ulbleu}{rgb}{0, .3, .57}
 \hypersetup{
@@ -26,13 +28,11 @@
   citecolor=ulbleu,
   linktoc=all
 }
-\usepackage{booktabs}
-\usepackage{listings}
-\defbibheading{bibliography}{\section{Bibliographie}}
-\author{Contzen Laurent}
 \bibliography{tpm}
-\onehalfspacing
+\defbibheading{bibliography}{\section{Bibliographie}}
 \newcommand{\fliptable}{$( $\raisebox{0.75em}{\oval(10,10)[r b] }$\;   ^{\circ} \square ^{\circ} ) $\raisebox{0.75em}{\oval(10,10)[r b] }$ \; \smallfrown$ \raisebox{0.25em}{$\bot$}{\bf --}\raisebox{0.25em}{$\bot$}}
+\author{Contzen Laurent}
+\onehalfspacing
 \begin{document}
 
 \begin{titlepage}  
