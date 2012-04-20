@@ -53,6 +53,7 @@
 \newpage
 
 \section{Introduction}
+\colorbox{BrickRed}{\textbf{TODO : } Refaire completement cette introduction.} \\ 
 L'action d'effectuer des requêtes dans un système d'information requiert souvient d'utiliser un langage contrôlé, de structurer les requêtes sous une cetaine forme, d'utiliser des formulaires ou des opérateurs booléens directement et encore bien d'autres contraintes.
 Ceci pose de nombreux problèmes d'énonciation ou de compréhension de requêtes.
 Pouvoir dialoguer de manière simplifiée avec un système d'information permettrait de résoudre beaucoup de ces problemes. \colorbox{BrickRed}{\textbf{TODO : } Parler de DBs} \\
@@ -60,15 +61,37 @@ L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est d'ess
 Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données.
 
 \section{Table des matières commentée du mémoire}
+Bien que soumise à modifications lors de la réalisation du mémoire, cette table des matières donne un aperçu de la manière dont le travail sera organisé.
 \subsection{Introduction}
+L'introduction abordera la problématique à laquelle ce mémoire tentera d'apporter une solution.
+Elle sera axée sur une présentation claire et succinte des tenants et aboutissants du projet.
 \subsection{Etat de l'art}
+Le sujet traité par ce mémoire a déjà été abordé par le passé dans diverses recherches.
+Cet état de l'art résumera les solutions existantes ainsi que les recherches menées en la matière.
 \subsection{Etude des possibilités de requêtes}
+La première étape de la conception du logiciel sera l'étude des possibilités de requêtes que les utilisateurs pourront formuler.
+Il sera nécéssaire de faire des choix sur les possibilités offertes, autant du point de vue vocabulaire que du point de vue syntaxe.
+Il pourra être interessant de proposer deux méthodes d'interrogation de la base de données.
+La première utiliserait un formalisme imposé à l'utilisateur balisant sa requête.
+Ce formalisme devra bien entendu rester extrèmement intuitif pour l'utilisateur afin de ne pas retomber dans les problèmes des systèmes de recherche d'informations classiques.
+Il pourra être de la forme \verb@actor=<nom>@. 
+L'autre méthode serait un langage beaucoup plus libre, et donc dont l'extraction des données utiles sera plus complexe. \\
+La mise en place de ces deux méthodes permettra de comparer les résultats de qualité de réponses renvoyées à l'utilisateur selon son degré de liberté dans les questions. 
 \subsection{De la base de données}
+Le manière dont les données seront enregistrées dans la base de données ainsi que les données en elles-mêmes joueront bien évidement un rôle crucial dans la qualité des résultats que le logiciel fournira.
 \subsubsection{Conception l'architecture de la base de données}
+Une fois que les possibilités de requêtes seront clairement définies, il sera possible et nécéssaire d'architecturer la base de données en fonction d'elles afin de permettre une recherche de résultats la plus performante possible.
+L'architecture de la base de données fera donc l'objet d'une étude réfléchie et justifiée.
 \subsubsection{Collecte et insertion de données dans la base de données}
-\subsection{Des requêtes}
+Afin de pouvoir évaluer la qualité des résultats renvoyés par le logiciel, il faudra peupler celle ci avec des données de qualité concernant le domaine d'application.
+L'Internet Movie DataBase\footnote{\url{http://imdb.com}} offre une possibilité de récupération de données structurées.
+Ceci pourra être une bonne source de données tout en gardant à l'esprit que les sites collaboratifs tels que celui ci ne peuvent être considérés comme parfaits. \\
+Une fois les données collectées, il faudra les insérer dans la base de données de manière cohérente avec l'architecture de celle-ci.
+\subsection{Des requêtes et réponses}
 \subsubsection{Conception de l'analyse des requêtes}
+Point essentiel pour la qualité des résultats, les requêtes des utilisateurs devront être correctement étudiées afin d'extraire toutes les informations utiles et uniquement elles.
 \subsubsection{Conception de la recherche de la meilleure réponse}
+\subsubsection{Conception de la méthode de formulation de réponses}
 \subsection{Implémentation}
 \subsection{Evaluation des résultats}
 \subsubsection{Méthode}
