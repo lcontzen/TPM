@@ -61,7 +61,7 @@ L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est d'ess
 Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données.
 
 \section{Table des matières commentée du mémoire}
-Bien que soumise à modifications lors de la réalisation du mémoire, cette table des matières donne un aperçu de la manière dont le travail sera organisé.
+Bien que sujette à modifications lors de la réalisation du mémoire, cette table des matières donne un aperçu de la manière dont le travail sera organisé.
 \subsection{Introduction}
 L'introduction abordera la problématique à laquelle ce mémoire tentera d'apporter une solution.
 Elle sera axée sur une présentation claire et succinte des tenants et aboutissants du projet.
@@ -75,8 +75,10 @@ Il pourra être interessant de proposer deux méthodes d'interrogation de la bas
 La première utiliserait un formalisme imposé à l'utilisateur balisant sa requête.
 Ce formalisme devra bien entendu rester extrèmement intuitif pour l'utilisateur afin de ne pas retomber dans les problèmes des systèmes de recherche d'informations classiques.
 Il pourra être de la forme \verb@actor=<nom>@. 
-L'autre méthode serait un langage beaucoup plus libre, et donc dont l'extraction des données utiles sera plus complexe. \\
-La mise en place de ces deux méthodes permettra de comparer les résultats de qualité de réponses renvoyées à l'utilisateur selon son degré de liberté dans les questions. 
+L'autre méthode serait un langage beaucoup plus libre, et donc dont l'extraction des données utiles sera plus complexe. 
+La mise en place de ces deux méthodes permettra de comparer les résultats de qualité de réponses renvoyées à l'utilisateur selon son degré de liberté dans les questions. \\
+Il sera nécéssaire aussi de bien définir les types d'entités que l'on désirera reconnaitre dans les questions.
+Les noms de films, de personnes et années semblent être une bonne base. 
 \subsection{De la base de données}
 Le manière dont les données seront enregistrées dans la base de données ainsi que les données en elles-mêmes joueront bien évidement un rôle crucial dans la qualité des résultats que le logiciel fournira.
 \subsubsection{Conception l'architecture de la base de données}
@@ -90,12 +92,28 @@ Une fois les données collectées, il faudra les insérer dans la base de donné
 \subsection{Des requêtes et réponses}
 \subsubsection{Conception de l'analyse des requêtes}
 Point essentiel pour la qualité des résultats, les requêtes des utilisateurs devront être correctement étudiées afin d'extraire toutes les informations utiles et uniquement elles.
+Diverses techniques d'ingénierie linguistique existent à cette fin, il faudra donc sélectionner la plus appropriée. 
 \subsubsection{Conception de la recherche de la meilleure réponse}
+Une fois les informations utiles extraites de la question, il faudra pouvoir obtenir la réponse la plus adaptée possible dans les informations contenues dans la base de données.
+Cette recherche de la meilleure réponse devra elle aussi être soigneusement réfléchie afin de garantir une qualité de résultats la plus élevée possible.
 \subsubsection{Conception de la méthode de formulation de réponses}
 \subsection{Implémentation}
+L'implémentation du logiciel sera l'élément central de ce mémoire afin de mettre en pratique toute l'étude théorique précédemment réalisée.
+Elle sera à priori réalisée en utilisant au moins deux langages de programmation différents.
+Pour tout ce qui est lié à l'ingénierie linguistique le Python est actuellement le langage de référence dans la communauté de developpeurs d'outils de traitement de langages naturels.
+Le toolkit NLTK\footnote{\url{http://www.nltk.org/}} jouit d'une excellente réputation et fournit énormément d'outils facilitant le développement.
+Il a toutefois diverses faiblesses telles que sa lourdeur et sa difficulté d'utilisation dans un environnement non totalement contrôlé.
+De plus, la plupart des fonctionnalités fournies par NLTK ne sont pas très compliquées à réimplémenter soi-même.
+Le choix de l'utilisation ou non de ce toolkit sera donc à réfléchir soigneusement. \\
+Le reste de l'implémentation sera à priori réalisé à l'aide du langage Java et utilisera l'outil d'architectures de données DB-Main\footnote{\url{http://www.db-main.eu}}. \\
+
+L'implémentation sera ici détaillée.
 \subsection{Evaluation des résultats}
+Lorsque le logiciel sera implémenté et fonctionnel, une phase de test sera effectuée afin de déterminer si les résultats renvoyés aux utilisateurs sont pertinents par rapport aux attentes et répondent clairement aux requêtes.
 \subsubsection{Méthode}
+La méthode de tests du logiciel sera précautionneusement conçue afin de refleter au mieux la pertinence générale des réponses. 
 \subsubsection{Résultats}
+
 \subsection{Conclusion}
 
 \section{Bibliographie commentée}
