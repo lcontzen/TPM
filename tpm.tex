@@ -28,9 +28,32 @@
   citecolor=ulbleu,
   linktoc=all
 }
+\DeclareCiteCommand{\titleandsubtitle}
+                   {\boolfalse{citetracker}%
+                     \boolfalse{pagetracker}%
+                     \usebibmacro{prenote}}
+                   {\indexfield{indextitle}%
+                     \printtext[citetitle]{%
+                       \printfield[noformat]{title}%
+                       \iffieldundef{subtitle}{}{\subtitlepunct}%
+                       \printfield[noformat]{subtitle}}}%
+                   {\multicitedelim}
+                   {\usebibmacro{postnote}}
+\DeclareCiteCommand*{\citeauthor}
+                    {\defcounter{maxnames}{99}%
+                      \defcounter{minnames}{99}%
+                      \defcounter{uniquename}{2}%
+                      \boolfalse{citetracker}%
+                      \boolfalse{pagetracker}%
+                      \usebibmacro{prenote}}
+                    {\ifciteindex{\indexnames{labelname}}{}%
+                      \printnames{labelname}}
+                    {\multicitedelim}
+                    {\usebibmacro{postnote}}
 \bibliography{tpm}
 \defbibheading{bibliography}{\section{Bibliographie}}
 \newcommand{\fliptable}{$( $\raisebox{0.75em}{\oval(10,10)[r b] }$\;   ^{\circ} \square ^{\circ} ) $\raisebox{0.75em}{\oval(10,10)[r b] }$ \; \smallfrown$ \raisebox{0.25em}{$\bot$}{\bf --}\raisebox{0.25em}{$\bot$}}
+\newcommand{\prettycite}[1]{\citeauthor*{#1} - \titleandsubtitle{#1} \cite{#1}}
 \author{Contzen Laurent}
 \onehalfspacing
 \begin{document}
