@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
@@ -53,12 +53,24 @@
 \newpage
 
 \section{Introduction}
-\colorbox{BrickRed}{\textbf{TODO : } Refaire completement cette introduction.} \\ 
-L'action d'effectuer des requêtes dans un système d'information requiert souvient d'utiliser un langage contrôlé, de structurer les requêtes sous une cetaine forme, d'utiliser des formulaires ou des opérateurs booléens directement et encore bien d'autres contraintes.
-Ceci pose de nombreux problèmes d'énonciation ou de compréhension de requêtes.
-Pouvoir dialoguer de manière simplifiée avec un système d'information permettrait de résoudre beaucoup de ces problemes. \colorbox{BrickRed}{\textbf{TODO : } Parler de DBs} \\
-L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est d'essayer d'implémenter un logiciel permettant à un utilisateur de poser une question en langage naturel et d'obtenir, s'il en existe une, une réponse dans le même langage naturel.
-Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données.
+L'évolution des technologies depuis plusieures décénnies, et l'avènement du Web en particulier, ont permis l'enregistrement et la mise à disposition d'une quantité colossale d'informations.
+Effectuer une recherche dans un système d'information contenant une grande quantité de données est toutefois souvent une opération complexe lorsqu'un résultat précis et compréhensible est désiré. \\
+
+Les informations sont, depuis la création des systèmes d'information, organisées et enregistrées dans des bases de données.
+Il existe différents paradigmes dans ce domaine, mais le modèle le plus utilisé actuellement est le modèle relationnel.
+Le langage de référence afin d'interagir avec une base de données suivant ce modèle est le SQL\footnote{Structured Query Language}.
+Ce langage est extrèmement puissant mais impose beaucoup de rigueur ainsi qu'une connaissance complète de la structure de la base de données avec laquelle l'on désire interférer.
+Cette complexité couplée au fait que le SQL permet aussi de modifier les données, a amené à la création de dispositifs intermédiaires permettant de rechercher des informations.
+Ces dispositifs nécéssitent fréquemment l'utilisation d'un langage contrôlé au vocabulaire précis ou la structuration très précise de la requête à l'aide d'opérateurs booléens. 
+Ceci n'est pas à la portée de tout un chacun sans formation préalable et un utilisateur non-initié confronté à ces obligations se retrouvera désorienté et ne parviendra pas à obtenir l'information qu'il recherche. 
+Une fois la requête correctement formulée, il faut ensuite réussir à comprendre les résultats renvoyés par le système d'information.
+Cette étape dans l'obtention d'une information peut parfois se révéler tout aussi compliquée que la précédente. \\
+
+Avoir la possibilité de dialoguer de manière simplifiée avec un système d'information permettrait à un beaucoup plus grand nombre d'accéder aux informations qu'il contient.
+L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est d'implémenter un logiciel ayant pour but de permettre à un utilisateur de poser une question en langage naturel ou dans un langage possédant une syntaxe et une structure beaucoup moins contraignantes et beaucoup plus intuitives que celles des langages contrôlés actuellement existants et d'obtenir, s'il en existe une, une réponse en langage naturel.
+Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données, sous les hypothèses et choix qui seront faits tout au long de ce mémoire. \\
+
+Afin de rester dans un cadre ciblé et précis, le domaine d'application de l'édition, et plus particulièrement des films, a été choisi.
 
 \section{Table des matières commentée du mémoire}
 Bien que sujette à modifications lors de la réalisation du mémoire, cette table des matières donne un aperçu de la manière dont le travail sera organisé.
