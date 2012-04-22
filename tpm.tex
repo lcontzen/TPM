@@ -77,6 +77,7 @@ Ce formalisme devra bien entendu rester extrèmement intuitif pour l'utilisateur
 Il pourra être de la forme \verb@actor=<nom>@. 
 L'autre méthode serait un langage beaucoup plus libre, et donc dont l'extraction des données utiles sera plus complexe. 
 La mise en place de ces deux méthodes permettra de comparer les résultats de qualité de réponses renvoyées à l'utilisateur selon son degré de liberté dans les questions. \\
+
 Il sera nécéssaire aussi de bien définir les types d'entités que l'on désirera reconnaitre dans les questions.
 Les noms de films, de personnes et années semblent être une bonne base. 
 \subsection{De la base de données}
@@ -88,6 +89,7 @@ L'architecture de la base de données fera donc l'objet d'une étude réfléchie
 Afin de pouvoir évaluer la qualité des résultats renvoyés par le logiciel, il faudra peupler celle ci avec des données de qualité concernant le domaine d'application.
 L'Internet Movie DataBase\footnote{\url{http://imdb.com}} offre une possibilité de récupération de données structurées.
 Ceci pourra être une bonne source de données tout en gardant à l'esprit que les sites collaboratifs tels que celui ci ne peuvent être considérés comme parfaits. \\
+
 Une fois les données collectées, il faudra les insérer dans la base de données de manière cohérente avec l'architecture de celle-ci.
 \subsection{Des requêtes et réponses}
 \subsubsection{Conception de l'analyse des requêtes}
@@ -105,15 +107,17 @@ Le toolkit NLTK\footnote{\url{http://www.nltk.org/}} jouit d'une excellente rép
 Il a toutefois diverses faiblesses telles que sa lourdeur et sa difficulté d'utilisation dans un environnement non totalement contrôlé.
 De plus, la plupart des fonctionnalités fournies par NLTK ne sont pas très compliquées à réimplémenter soi-même.
 Le choix de l'utilisation ou non de ce toolkit sera donc à réfléchir soigneusement. \\
-Le reste de l'implémentation sera à priori réalisé à l'aide du langage Java et utilisera l'outil d'architectures de données DB-Main\footnote{\url{http://www.db-main.eu}}. \\
 
-L'implémentation sera ici détaillée.
+Il pourra être interessant d'utiliser le service OpenCalais\footnote{\url{http://viewer.opencalais.com/}} afin de vérifier les résultats de l'analyse des requêtes de l'implémentation ici effectuée.
+Ce service n'étant, contrairement à ce que son nom laisserait présager, pas open-source, son utilisation sera limitée à cette vérification et il ne sera pas possible d'utiliser les résultats de leurs recherches dans la conception de notre analyse des requêtes. \\
+
+Le reste de l'implémentation sera à priori réalisé à l'aide du langage Java et utilisera l'outil d'architectures de données DB-Main\footnote{\url{http://www.db-main.eu}}.
 \subsection{Evaluation des résultats}
 Lorsque le logiciel sera implémenté et fonctionnel, une phase de test sera effectuée afin de déterminer si les résultats renvoyés aux utilisateurs sont pertinents par rapport aux attentes et répondent clairement aux requêtes.
 \subsubsection{Méthode}
 La méthode de tests du logiciel sera précautionneusement conçue afin de refleter au mieux la pertinence générale des réponses. 
 \subsubsection{Résultats}
-
+Ces résultats de la phase de tests seront naturellement d'une importance cruciale : ils permettront de déterminer si les choix effectués tout au long du mémoire et l'implémentation déployée ont permis de mettre en place une solution répondant positivement à la question de recherche.
 \subsection{Conclusion}
 
 \section{Bibliographie commentée}
