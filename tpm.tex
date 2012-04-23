@@ -1,7 +1,9 @@
-\documentclass[12pt]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
+\usepackage[top=25mm, bottom=25mm, left=35mm, right=25mm]{geometry}
+\usepackage{array}
 \usepackage{verbatim}
 \usepackage{csquotes}
 \usepackage{graphicx}
@@ -54,23 +56,46 @@
 \defbibheading{bibliography}{}
 \newcommand{\fliptable}{$( $\raisebox{0.75em}{\oval(10,10)[r b] }$\;   ^{\circ} \square ^{\circ} ) $\raisebox{0.75em}{\oval(10,10)[r b] }$ \; \smallfrown$ \raisebox{0.25em}{$\bot$}{\bf --}\raisebox{0.25em}{$\bot$}}
 \newcommand{\prettycite}[1]{\citeauthor*{#1} - \titleandsubtitle{#1} \cite{#1}}
-\author{Contzen Laurent}
+\title{Travail Préparatoire au Mémoire}
+\date{Juin 2012}
+\author{Contzen Laurent (lcontzen@ulb.ac.be)}
 \onehalfspacing
 \begin{document}
 
-\begin{titlepage}  
-  \begin{flushleft}
-    Contzen Laurent
-  \end{flushleft}
+\begin{titlepage}
+  \singlespacing
   \begin{center}
-    \vspace{82mm}\LARGE{\textbf{Interrogation de bases de données en langage naturel – Application au domaine de l’édition.} \\    
-      Travail Préparatoire au Mémoire}
+    \huge{\textsc{Université Libre de Bruxelles}}\\
+    \huge{Faculté de Philosophie et Lettres}
   \end{center}
-  \begin{flushright}
-    \vspace{92mm}
-    Année Académique 2011-2012.             
-  \end{flushright}
+  \vfill
+  \begin{center}
+    \Huge{\textbf{Interrogation de bases de données en langage naturel}}\\
+    \LARGE{Application au domaine de l'édition}
+  \end{center}
+  \vfill
+  \begin{tabular}{b{5.5cm}b{7.5cm}}
+    Laurent \textsc{Contzen} & Travail préparatoire au mémoire qui sera présenté sous la direction de M. Anthony \textsc{Cleve} en vue de l'obtention du titre de Maître en Sciences et Technologies de l'Information et de la Communication\\
+  \end{tabular}
+  \vfill
+  \begin{center}
+    Année académique 2011--2012
+  \end{center}
 \end{titlepage}
+
+%% \begin{titlepage}
+%%   \begin{flushleft}
+%%     Contzen Laurent
+%%   \end{flushleft}
+%%   \begin{center}
+%%     \vspace{77mm}\LARGE{\textbf{Interrogation de bases de données en langage naturel – Application au domaine de l’édition.} \\
+%%       Travail Préparatoire au Mémoire}
+%%   \end{center}
+%%   \begin{flushright}
+%%     \vspace{87mm}
+%%     Année Académique 2011-2012.
+%%   \end{flushright}
+%% \end{titlepage}
 
 \tableofcontents
 \newpage
