@@ -87,15 +87,15 @@
 \newpage
 
 \section{Introduction}
-L'évolution des technologies depuis plusieures décénnies, et l'avènement du Web en particulier, ont permis l'enregistrement et la mise à disposition d'une quantité colossale d'informations.
+L'évolution des technologies depuis plusieurs décennies, et l'avènement du Web en particulier, ont permis l'enregistrement et la mise à disposition d'une quantité colossale d'informations.
 Effectuer une recherche dans un système d'information contenant une grande quantité de données est toutefois souvent une opération complexe lorsqu'un résultat précis et compréhensible est désiré. \\
 
 Les informations sont, depuis la création des systèmes d'information, organisées et enregistrées dans des bases de données.
 Il existe différents paradigmes dans ce domaine, mais le modèle le plus utilisé actuellement est le modèle relationnel.
 Le langage de référence afin d'interagir avec une base de données suivant ce modèle est le SQL\footnote{Structured Query Language}.
-Ce langage est extrèmement puissant mais impose beaucoup de rigueur ainsi qu'une connaissance complète de la structure de la base de données avec laquelle l'on désire interférer.
+Ce langage est extrêmement puissant mais impose beaucoup de rigueur ainsi qu'une connaissance complète de la structure de la base de données avec laquelle l'on désire interférer.
 Cette complexité couplée au fait que le SQL permet aussi de modifier les données, a amené à la création de dispositifs intermédiaires permettant de rechercher des informations.
-Ces dispositifs nécéssitent fréquemment l'utilisation d'un langage contrôlé au vocabulaire précis ou la structuration très précise de la requête à l'aide d'opérateurs booléens. 
+Ces dispositifs nécessitent fréquemment l'utilisation d'un langage contrôlé au vocabulaire précis ou la structuration très précise de la requête à l'aide d'opérateurs booléens. 
 Ceci n'est pas à la portée de tout un chacun sans formation préalable et un utilisateur non-initié confronté à ces obligations se retrouvera désorienté et ne parviendra pas à obtenir l'information qu'il recherche. 
 Une fois la requête correctement formulée, il faut ensuite réussir à comprendre les résultats renvoyés par le système d'information.
 Cette étape dans l'obtention d'une information peut parfois se révéler tout aussi compliquée que la précédente. \\
@@ -111,26 +111,26 @@ Afin de rester dans un cadre ciblé et précis, le domaine d'application de l'é
 Bien que sujette à modifications lors de la réalisation du mémoire, cette table des matières donne un aperçu de la manière dont le travail sera organisé.
 \subsection{Introduction}
 L'introduction abordera la problématique à laquelle ce mémoire tentera d'apporter une solution.
-Elle sera axée sur une présentation claire et succinte des tenants et aboutissants du projet.
-\subsection{Etat de l'art}
+Elle sera axée sur une présentation claire et succincte des tenants et aboutissants du projet.
+\subsection{État de l'art}
 Le sujet traité par ce mémoire a déjà été abordé par le passé dans diverses recherches.
 Cet état de l'art résumera les solutions existantes ainsi que les recherches menées en la matière.
-\subsection{Etude des possibilités de requêtes}
+\subsection{Étude des possibilités de requêtes}
 La première étape de la conception du logiciel sera l'étude des possibilités de requêtes que les utilisateurs pourront formuler.
-Il sera nécéssaire de faire des choix sur les possibilités offertes, autant du point de vue vocabulaire que du point de vue syntaxe.
-Il pourra être interessant de proposer deux méthodes d'interrogation de la base de données.
+Il sera nécessaire de faire des choix sur les possibilités offertes, autant du point de vue vocabulaire que du point de vue syntaxe.
+Il pourra être intéressant de proposer deux méthodes d'interrogation de la base de données.
 La première utiliserait un formalisme imposé à l'utilisateur balisant sa requête.
-Ce formalisme devra bien entendu rester extrèmement intuitif pour l'utilisateur afin de ne pas retomber dans les problèmes des systèmes de recherche d'informations classiques.
+Ce formalisme devra bien entendu rester extrêmement intuitif pour l'utilisateur afin de ne pas retomber dans les problèmes des systèmes de recherche d'informations classiques.
 Il pourra être de la forme \verb@actor=<nom>@. 
 L'autre méthode serait un langage beaucoup plus libre, et donc dont l'extraction des données utiles sera plus complexe. 
 La mise en place de ces deux méthodes permettra de comparer les résultats de qualité de réponses renvoyées à l'utilisateur selon son degré de liberté dans les questions. \\
 
-Il sera nécéssaire aussi de bien définir les types d'entités que l'on désirera reconnaitre dans les questions.
+Il sera nécessaire aussi de bien définir les types d'entités que l'on désirera reconnaître dans les questions.
 Les noms de films, de personnes et années semblent être une bonne base. 
 \subsection{De la base de données}
 Le manière dont les données seront enregistrées dans la base de données ainsi que les données en elles-mêmes joueront bien évidement un rôle crucial dans la qualité des résultats que le logiciel fournira.
 \subsubsection{Conception l'architecture de la base de données}
-Une fois que les possibilités de requêtes seront clairement définies, il sera possible et nécéssaire d'architecturer la base de données en fonction d'elles afin de permettre une recherche de résultats la plus performante possible.
+Une fois que les possibilités de requêtes seront clairement définies, il sera possible et nécessaire d'architecturer la base de données en fonction d'elles afin de permettre une recherche de résultats la plus performante possible.
 L'architecture de la base de données fera donc l'objet d'une étude réfléchie et justifiée.
 \subsubsection{Collecte et insertion de données dans la base de données}
 Afin de pouvoir évaluer la qualité des résultats renvoyés par le logiciel, il faudra peupler celle ci avec des données de qualité concernant le domaine d'application.
@@ -148,22 +148,22 @@ Cette recherche de la meilleure réponse devra elle aussi être soigneusement r�
 \subsubsection{Conception de la méthode de formulation de réponses}
 Enfin, il faudra être capable de renvoyer une réponse claire et compréhensible à l'utilisateur afin d'éviter qu'il ne se méprenne sur sa validité.
 \subsection{Implémentation}
-L'implémentation du logiciel sera l'élément central de ce mémoire afin de concretiser toute l'étude théorique précédemment réalisée.
+L'implémentation du logiciel sera l'élément central de ce mémoire afin de concrétiser toute l'étude théorique précédemment réalisée.
 Elle sera à priori réalisée en utilisant au moins deux langages de programmation différents.
-Pour tout ce qui est lié à l'ingénierie linguistique le Python est actuellement le langage de référence dans la communauté de developpeurs d'outils de traitement de langages naturels.
+Pour tout ce qui est lié à l'ingénierie linguistique le Python est actuellement le langage de référence dans la communauté de développeurs d'outils de traitement de langages naturels.
 Le toolkit NLTK\footnote{\url{http://www.nltk.org/}} jouit d'une excellente réputation et fournit énormément d'outils facilitant le développement.
 Il a toutefois diverses faiblesses telles que sa lourdeur et sa difficulté d'utilisation dans un environnement non totalement contrôlé.
-De plus, la plupart des fonctionnalités fournies par NLTK ne sont pas très compliquées à réimplémenter soi-même.
+De plus, la plupart des fonctionnalités fournies par NLTK ne sont pas très compliquées à ré-implémenter soi-même.
 Le choix de l'utilisation ou non de ce toolkit sera donc à réfléchir soigneusement. \\
 
-Il pourra être interessant d'utiliser le service OpenCalais\footnote{\url{http://viewer.opencalais.com/}} afin de vérifier les résultats de l'analyse des requêtes de l'implémentation ici effectuée.
+Il pourra être intéressant d'utiliser le service OpenCalais\footnote{\url{http://viewer.opencalais.com/}} afin de vérifier les résultats de l'analyse des requêtes de l'implémentation ici effectuée.
 Ce service n'étant, contrairement à ce que son nom laisserait présager, pas open-source, son utilisation sera limitée à cette vérification et il ne sera pas possible d'utiliser les résultats de leurs recherches dans la conception de notre analyse des requêtes. \\
 
 Le reste de l'implémentation sera à priori réalisé à l'aide du langage Java et utilisera l'outil d'architectures de données DB-Main\footnote{\url{http://www.db-main.eu}}.
-\subsection{Evaluation des résultats}
+\subsection{Évaluation des résultats}
 Lorsque le logiciel sera implémenté et fonctionnel, une phase de test sera effectuée afin de déterminer si les résultats renvoyés aux utilisateurs sont pertinents par rapport aux attentes et répondent clairement aux requêtes.
 \subsubsection{Méthode}
-La méthode de tests du logiciel sera précautionneusement conçue afin de refleter au mieux la pertinence générale des réponses. 
+La méthode de tests du logiciel sera précautionneusement conçue afin de refléter au mieux la pertinence générale des réponses. 
 \subsubsection{Résultats}
 Ces résultats de la phase de tests seront naturellement d'une importance cruciale : ils permettront de déterminer si les choix effectués tout au long du mémoire et l'implémentation déployée ont permis de mettre en place une solution répondant positivement à la question de recherche.
 \subsection{Conclusion}
@@ -172,14 +172,14 @@ Ces résultats de la phase de tests seront naturellement d'une importance crucia
 \section{Bibliographie commentée}
 Les éléments bibliographiques repris ci-dessous sont ici organisés par thèmes afin de simplifier les commentaires et d'éviter une redondance inutiles de ceux ci. La bibliographie complète et structurée est disponible dans la \autoref{sec:bibliography}.
 \subsection{Bases de données}
-Comme énoncé précédemment, une bonne architecture de la base de données sera nécéssaire à la bonne réalisation du mémoire. \\ 
+Comme énoncé précédemment, une bonne architecture de la base de données sera nécessaire à la bonne réalisation du mémoire. \\ 
 \noindent\textbf{Références :}
 \begin{itemize}
   \item \prettycite{hainaut2012bases}
   \item \prettycite{date2009sql}
 \end{itemize}
 \subsection{Ingénierie linguistique}
-L'ingénierie linguistique est un domaine vaste dont plusieurs sous domaines nous interesseront. 
+L'ingénierie linguistique est un domaine vaste dont plusieurs sous domaines nous intéresseront. 
 \subsubsection*{Général}
 \noindent\textbf{Références :}
 \begin{itemize}
@@ -235,13 +235,13 @@ Coeur du sujet de ce mémoire, le thème des interactions avec des bases de donn
 \section{Plan de travail}
 \begin{tabular}{p{4cm} p{9cm}}
   \toprule
-  \large{Echéances} & \large{Etapes devant être complétées} \\
+  \large{Échéances} & \large{Étapes devant être complétées} \\
   \midrule
   \large{Novembre 2012} & \begin{itemize}
-    \item Etat de l'art et analyse de l'existant
+    \item État de l'art et analyse de l'existant
     \item Définition des possibilités de requêtes
     \item Conception théorique de la base de données en accord avec ces possibilités de requêtes
-    \item Etude de la collecte et de l'insertion des données dans la base de données
+    \item Étude de la collecte et de l'insertion des données dans la base de données
   \end{itemize}
   \\
   \large{Mars 2013} & \begin{itemize}
