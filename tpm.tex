@@ -214,27 +214,35 @@ En véritable réponse à l'introduction, nous rappellerons la démarche et verr
 Les forces et faiblesses de la démarche établie seront exposées afin de déterminer ce qui pourrait être modifié à l'avenir.
 \newpage
 \section{Bibliographie commentée}
+La bibliographie présentée ici est forcément incomplète par rapport à celle que contiendra ce mémoire.
+Elle donne toutefois déjà un appercu des différents domaines qui seront présentés et des sources qui seront utilisées.
+Afin d'enrichir cette bibliographie, j'effectuerai des recherches bibliographiques approfondies, autant dans les bases de données documentaires auxquelles l'Université nous permet l'accès que dans d'autres telles que l'ACM.
+Je n'hésiterai pas non plus à entrer en contact avec des personnes ayant déjà fait des recherches liées au sujet de ce mémoire en cas de besoin d'informations complémentaires, aisni qu'à consulter les notes de diverses conférences telles que ER, VLDB et NLP Conferences. \\
 Les éléments bibliographiques repris ci-dessous sont ici organisés par thèmes afin de simplifier les commentaires et d'éviter une redondance inutiles de ceux ci. La bibliographie complète et structurée est disponible dans la \autoref{sec:bibliography}.
 \subsection{Bases de données}
 Comme énoncé précédemment, une bonne architecture de la base de données sera nécessaire à la bonne réalisation du mémoire. \\ 
 \noindent\textbf{Références :}
 \begin{itemize}
-  \item \prettycite{hainaut2012bases}
-  \item \prettycite{date2009sql}
+  \item \prettycite{hainaut2012bases} \\
+    Livre de référence pour le cours de bases de données de notre cursus.
+  \item \prettycite{date2009sql} \\
+    Livre axé sur les bonnes pratiques en SQL.
 \end{itemize}
 \subsection{Ingénierie linguistique}
 L'ingénierie linguistique est un domaine vaste dont plusieurs sous domaines nous intéresseront. 
 \subsubsection*{Général}
 \noindent\textbf{Références :}
 \begin{itemize}
-  \item \prettycite{jurafsky2009speech}
+  \item \prettycite{jurafsky2009speech} \\
+    Livre de référence pour le cours d'ingénierie linguistique de notre cursus.
   \item \prettycite{katz1988exploiting}
 \end{itemize}
 \subsubsection*{Information Extraction}
 L'extraction d'informations permettra, comme le nom de ce domaine le laisse présager, d'extraire les informations utiles des requêtes des utilisateurs. \\
 \noindent\textbf{Références :}
 \begin{itemize}
-  \item \prettycite{soderland1999learning}
+  \item \prettycite{soderland1999learning} \\
+    Les données que nous allons traiter seront semi-structurées, cet article présente donc un intérêt non négligeable.
   \item \prettycite{appelt1999introduction}
   \item \prettycite{cardie1997empirical}
   \item \prettycite{huffman1996learning}
@@ -249,8 +257,22 @@ La formulation des réponses récupérées dans la base de données sera elle au
   \item \prettycite{ravichandran2002learning}
   \item \prettycite{reder1987strategy}
 \end{itemize}
+\subsection{Interactions avec des bases de données à l'aide de langage naturel}
+Coeur du sujet de ce mémoire, le thème des interactions avec des bases de données à l'aide de langage naturel a déjà été l'objet de recherches variées qu'il sera utile de consulter. \\
+\noindent\textbf{Références :}
+\begin{itemize}
+\item \prettycite{Samsonova03072003}
+\item \prettycite{Mazlack:1980:EBM:636669.636681}
+\item \prettycite{owda2007conversation}
+\item \prettycite{waltz1978english}
+\item \prettycite{sneiders2002automated}
+\item \prettycite{liu2006effective}
+\item \prettycite{frank2007question} 
+\item \prettycite{li2006constructing}
+\item \prettycite{androutsopoulos1995natural}
+\end{itemize}
 \subsection{Programmation}
-L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir obtenir des résultats concrets pouvant être analysés. Les langages de programmation allant être utilisés étant le Python et le Java, nous utiliserons diverses références concernant ces deux langages précis.\\
+L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir obtenir des résultats concrets pouvant être analysés. Les langages de programmation allant être utilisés étant le Python et le Java, nous utiliserons diverses références concernant ces deux langages précis. Il est à noter que ces références seront plus utiles afin de mettre en pratique divers concepts que pour la recherche sur le sujet en lui même. \\
 \noindent\textbf{Références :}
 \begin{itemize}
   \item \prettycite{learnpythonthehardway}
@@ -260,20 +282,7 @@ L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir
   \item \prettycite{sierra2005head}
   \item \prettycite{deitel2012java}
 \end{itemize}
-\subsection{Interactions avec des bases de données à l'aide de langage naturel}
-Coeur du sujet de ce mémoire, le thème des interactions avec des bases de données à l'aide de langage naturel a déjà été l'objet de recherches variées qu'il sera utile de consulter. \\
-\noindent\textbf{Références :}
-\begin{itemize}
-  \item \prettycite{Samsonova03072003}
-  \item \prettycite{Mazlack:1980:EBM:636669.636681}
-  \item \prettycite{owda2007conversation}
-  \item \prettycite{waltz1978english}
-  \item \prettycite{sneiders2002automated}
-  \item \prettycite{liu2006effective}
-  \item \prettycite{frank2007question} 
-  \item \prettycite{li2006constructing}
-  \item \prettycite{androutsopoulos1995natural}
-\end{itemize}
+
 
 \newpage
 \section{Plan de travail}
@@ -327,9 +336,6 @@ Coeur du sujet de ce mémoire, le thème des interactions avec des bases de donn
 
 %% \subsection{Description du projet de mémoire}
 %% Implémentation d’un logiciel ayant pour but de permettre  à un utilisateur de poser une question en langage naturel et d’obtenir, s’il en existe une, une réponse dans le même langage naturel. La question sera traitée afin d’en extraire les informations utiles et ces dernières seront ensuite confrontées à une base de données dont l’architecture sera l’objet d’une étude détaillée. Les informations extraites de cette base de données seront ensuite reformulées en langage naturel. Le domaine d’application sera celui des livres et/ou des films. Ce mémoire mêlera donc ingénierie linguistique et bases de données.
-
-\newpage
-\section{Conclusion}
 
 \newpage
 \section{Bibliographie}
