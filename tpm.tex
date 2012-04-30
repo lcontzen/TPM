@@ -175,7 +175,7 @@ L'Internet Movie DataBase\footnote{\url{http://imdb.com}} offre une possibilité
 Ceci pourra être une bonne source de données tout en gardant à l'esprit que les sites collaboratifs tels que celui ci ne peuvent être considérés comme parfaits. \\
 
 Une fois les données collectées, il faudra les insérer dans la base de données de manière automatisée et cohérente avec l'architecture de celle-ci.
-\subsection{Des requêtes et réponses}
+\subsection{Conception des requêtes et des réponses}
 \subsubsection{Conception de l'analyse des requêtes}
 Point essentiel pour la qualité des résultats, les requêtes des utilisateurs devront être correctement étudiées afin d'extraire toutes les informations utiles et uniquement elles.
 Diverses techniques d'ingénierie linguistique existent à cette fin, il faudra donc sélectionner la plus appropriée. 
@@ -231,7 +231,7 @@ Comme énoncé précédemment, une bonne architecture de la base de données ser
   \item \prettycite{hainaut2012bases} \\
     Livre de référence pour le cours de bases de données de notre cursus.
   \item \prettycite{date2009sql} \\
-    Livre axé sur les bonnes pratiques en SQL.
+    Livre présentant les bonnes pratiques en SQL.
 \end{itemize}
 \subsection{Ingénierie linguistique}
 L'ingénierie linguistique est un domaine vaste dont plusieurs sous domaines nous intéresseront. 
@@ -240,7 +240,8 @@ L'ingénierie linguistique est un domaine vaste dont plusieurs sous domaines nou
 \begin{itemize}
   \item \prettycite{jurafsky2009speech} \\
     Livre de référence pour le cours d'ingénierie linguistique de notre cursus.
-  \item \prettycite{katz1988exploiting}
+  \item \prettycite{katz1988exploiting} \\
+    Article présentant les recherches faites dans le cadre du développement des outils lexicaux pour le projet START du MIT.
 \end{itemize}
 \subsubsection*{Information Extraction}
 L'extraction d'informations permettra, comme le nom de ce domaine le laisse présager, d'extraire les informations utiles des requêtes des utilisateurs. \\
@@ -248,33 +249,50 @@ L'extraction d'informations permettra, comme le nom de ce domaine le laisse pré
 \begin{itemize}
   \item \prettycite{soderland1999learning} \\
     Les données que nous allons traiter seront semi-structurées, cet article présente donc un intérêt non négligeable.
-  \item \prettycite{appelt1999introduction}
-  \item \prettycite{cardie1997empirical}
-  \item \prettycite{huffman1996learning}
+  \item \prettycite{appelt1999introduction} \\
+    Article introduisant le domaine de l'extraction d'information, en présentant les problèmes visés par le domaine, l'état des recherches le concernant et les différentes approches existant.
+  \item \prettycite{cardie1997empirical} \\
+    Article présentant l'utilisation de méthodes empiriques utilisant du machine-learning dans le cadre de l'extraction d'information
+  \item \prettycite{huffman1996learning} \\
+    Article présentant un système autonome d'extraction de \textit{patterns} directement depuis des exemples de textes.
 \end{itemize}
 \subsubsection*{Question answering}
 La formulation des réponses récupérées dans la base de données sera elle aussi l'objet d'une consultation et d'une analyse des recherches déjà effectuées dans ce domaine. \\
 \noindent\textbf{Références :}
 \begin{itemize}
-  \item \prettycite{katz2006natural}
-  \item \prettycite{katz2005external}
-  \item \prettycite{lin2003role}
-  \item \prettycite{ravichandran2002learning}
-  \item \prettycite{reder1987strategy}
+  \item \prettycite{katz2006natural} \\
+    Article présentant les stratégies et les résultats de l'utilisation d'annotations du langage naturel dans le système START.
+  \item \prettycite{katz2005external} \\
+    Article présentant l'utilisation de sources externes de connaissances dans le cadre de divers projets de question answering.
+  \item \prettycite{lin2003role} \\
+    Article présentant les résultats d'une étude sur les préférences d'utilisateurs en termes de réponses dans le cadre du question answering, ainsi que les bonnes pratiques dans ce domaine.
+  \item \prettycite{ravichandran2002learning} \\
+    Article présentant l'utilisation automatisée de patterns dans les textes pour du question answering dans des domaines ouverts.
+  \item \prettycite{reder1987strategy} \\
+    Article présentant diverses stratégies dans le choix d'une réponse dans le cadre d'un logiciel de question answering ainsi que leurs propriétés respectives.
 \end{itemize}
 \subsection{Interactions avec des bases de données à l'aide de langage naturel}
 Coeur du sujet de ce mémoire, le thème des interactions avec des bases de données à l'aide de langage naturel a déjà été l'objet de recherches variées qu'il sera utile de consulter. \\
 \noindent\textbf{Références :}
 \begin{itemize}
-\item \prettycite{Samsonova03072003}
-\item \prettycite{Mazlack:1980:EBM:636669.636681}
-\item \prettycite{owda2007conversation}
-\item \prettycite{waltz1978english}
-\item \prettycite{sneiders2002automated}
-\item \prettycite{liu2006effective}
-\item \prettycite{frank2007question} 
-\item \prettycite{li2006constructing}
-\item \prettycite{androutsopoulos1995natural}
+  \item \prettycite{Samsonova03072003} \\
+    Article présentant une méthode d'interrogation de base de données relationnelles basée sur une approche sémantique. La méthode s'adapte aux évolutions de données et de requêtes.
+  \item \prettycite{Mazlack:1980:EBM:636669.636681} \\
+    Article de 1980 présentant une réflexion sur la construction d'un \textit{mapping} entre un langage naturel et un langage de requêtes de base de données.
+  \item \prettycite{owda2007conversation} \\
+    Article présentant une approche pour créer une interface en langage naturel pour bases de données relationnelles en combinant des agents de conversation ayant un but ainsi que des arbres de connaissances. 
+  \item \prettycite{waltz1978english} \\
+    Article présentant la création d'un système permettant à des utilisateurs de dialoguer en anglais avec une base de données contenant des informations sur l'aviation.
+  \item \prettycite{sneiders2002automated} \\
+    Article présentant une technique de \textit{mapping} entre des modèles de questions et un modèle conceptuel de base de données.
+  \item \prettycite{liu2006effective} \\
+    Article présentant une étude approfondie des recherches efficaces de mots clés dans des bases de données.
+  \item \prettycite{frank2007question} \\
+    Article présentant une approche de question answering pour des questions liées à un domaine et dont la réponse est cherchée dans des informations structurées.
+  \item \prettycite{li2006constructing} \\
+    Article présentant la construction d'un langage d'interrogation d'une base de données XML.
+  \item \prettycite{androutsopoulos1995natural} \\
+    Article présentant les interfaces en langages naturels pour bases de données.
 \end{itemize}
 \subsection{Programmation}
 L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir obtenir des résultats concrets pouvant être analysés. Les langages de programmation allant être utilisés étant le Python et le Java, nous utiliserons diverses références concernant ces deux langages précis. Il est à noter que ces références seront plus utiles afin de mettre en pratique divers concepts que pour la recherche sur le sujet en lui même. \\
