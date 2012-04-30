@@ -88,36 +88,73 @@
 
 \section{Introduction}
 L'évolution des technologies depuis plusieurs décennies, et l'avènement du Web en particulier, ont permis l'enregistrement et la mise à disposition d'une quantité colossale d'informations.
-Effectuer une recherche dans un système d'information contenant une grande quantité de données est toutefois souvent une opération complexe lorsqu'un résultat précis et compréhensible est désiré. \\
+L'expression \textit{big data} est utilisée pour désigner ces ensembles de données d'une taille telle que leur traitement par les moyens classique devient presque impossible.
+Ce phénomène impose une nouvelle réflexion à propos de tout ce qui est lié à ces données, telles que les méthodes de traitement de données, de recherche d'informations, de stockage de ces données, et bien d'autres.
+La production toujours plus importante de contenu par des utilisateurs ainsi que le succès toujours croissant des réseaux sociaux laissent présager que ce phénomène va encore s'intensifier dans les années à venir, créant toujours plus d'informations à manipuler le plus rapidement et efficacement possible.\\
 
-Les informations sont, depuis la création des systèmes d'information, organisées et enregistrées dans des bases de données.
+Ces informations sont, depuis la création des systèmes d'information, organisées et enregistrées dans des bases de données.
 Il existe différents paradigmes dans ce domaine, mais le modèle le plus utilisé actuellement est le modèle relationnel.
 Le langage de référence afin d'interagir avec une base de données suivant ce modèle est le SQL\footnote{Structured Query Language}.
 Ce langage est extrêmement puissant mais impose beaucoup de rigueur ainsi qu'une connaissance complète de la structure de la base de données avec laquelle l'on désire interférer.
-Cette complexité couplée au fait que le SQL permet aussi de modifier les données, a amené à la création de dispositifs intermédiaires permettant de rechercher des informations.
+Cette complexité, couplée au fait que le SQL permet aussi de modifier les données, a amené à la création de dispositifs intermédiaires permettant de rechercher des informations.
 Ces dispositifs nécessitent fréquemment l'utilisation d'un langage contrôlé au vocabulaire précis ou la structuration très précise de la requête à l'aide d'opérateurs booléens. 
 Ceci n'est pas à la portée de tout un chacun sans formation préalable et un utilisateur non-initié confronté à ces obligations se retrouvera désorienté et ne parviendra pas à obtenir l'information qu'il recherche. 
 Une fois la requête correctement formulée, il faut ensuite réussir à comprendre les résultats renvoyés par le système d'information.
-Cette étape dans l'obtention d'une information peut parfois se révéler tout aussi compliquée que la précédente. \\
+Cette étape dans l'obtention d'une information peut parfois se révéler tout aussi compliquée que la précédente.
+Effectuer une recherche dans un système d'information contenant une grande quantité de données est donc souvent une opération complexe lorsqu'un résultat précis et compréhensible est désiré.
+Avoir la possibilité de dialoguer de manière simplifiée avec un système d'information permettrait à un large public non-informaticien d'accéder aux informations qu'il contient. \\
 
-Avoir la possibilité de dialoguer de manière simplifiée avec un système d'information permettrait à un beaucoup plus grand nombre d'accéder aux informations qu'il contient.
-L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est d'implémenter un logiciel ayant pour but de permettre à un utilisateur de poser une question en langage naturel ou dans un langage possédant une syntaxe et une structure beaucoup moins contraignantes et beaucoup plus intuitives que celles des langages contrôlés actuellement existants et d'obtenir, s'il en existe une, une réponse en langage naturel.
-Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données, sous les hypothèses et choix qui seront faits tout au long de ce mémoire. \\
+Nous sommes donc en présence d'une quantité massive d'informations pour laquelle nous avons besoin d'un support d'accès différent du support de prédilection actuel, le SQL. 
+Le langage naturel apparaît ici comme un support de choix.
+En effet, un utilisateur non-informaticien mais expert dans le domaine à propos duquel il recherche une information saura exprimer clairement sa question de manière aisée et transparente, sans devoir apprendre un autre langage. 
+Il est évident que ceci est applicable aussi bien pour la recherche d'informations que pour la manipulation de données (insertion, suppression, modification), mais les méthodologies pour ces différentes opérations différeront largement d'une opération à une autre.
+C'est pourquoi un choix fut nécessaire et nous nous concentrerons sur la recherche d'informations car cette opération est la plus utile au plus grand nombre d'utilisateurs. \\
+
+A l'instar du choix de l'opération offerte à l'utilisateur, un choix concernant la langue doit être fait.
+En effet, les langues existant actuellement sont fondamentalement différentes à plusieurs points de vues (orthographe, syntaxe, ...) et une question posée dans une langue ne pourra pas être automatique analysée de la même manière lorsque posée dans une autre langue.
+L'essentiel des recherches en ingénierie linguistique étant faites en utilisant l'anglais comme langage naturel, nous avons décidé d'utiliser l'anglais comme langue dans laquelle les utilisateurs dialogueront avec le système.
+Ce choix est justifié aussi par la quantité d'informations disponibles en anglais sur Internet pour peupler la base de données. \\
 
 Afin de rester dans un cadre ciblé et précis, le domaine d'application de l'édition, et plus particulièrement des films, a été choisi.
+Ce choix est motivé par plusieurs faits.
+Tout d'abord, les informations disponibles sur le sujet sont nombreuses tout en restant dans un cadre précis et structuré.
+Ensuite, ce domaine est connu d'un grand nombre, ce qui permettra de trouver aisément un panel d'utilisateurs pour la phase de tests.
+Enfin, du fait de mon intérêt personnel pour ce sujet, des connaissances sont déjà acquises.
+Il ne s'agira donc pas de découvrir la matière, mais bien de l'approfondir, ce qui, en termes de motivation et de compétences, représente un avantage non négligeable. \\
 
+L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est donc d'implémenter un logiciel ayant pour but de permettre à un utilisateur de poser une question en langage naturel ou dans un langage possédant une syntaxe et une structure beaucoup moins contraignantes et beaucoup plus intuitives que celles des langages contrôlés actuellement existants et d'obtenir, s'il en existe une, une réponse en langage naturel.
+Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données, sous les hypothèses et choix qui seront faits tout au long de ce mémoire. \\
+
+Ce mémoire permettra aussi une réflexion sur les interactions humains-ordinateurs.
+Depuis les débuts de l'informatique des outils ont étés successivement créés en suivant les évolution des technologies et des recherches en traitement de langages naturels afin de permettre à un utilisateur de dialoguer le plus naturellement possible avec un ordinateur.
+Le premier exemple connu de tel système fût le programme Eliza\footfullcite{weizenbaum1966eliza} développé par J. Weizenbaum de 1946 à 1966 offrant une simulation de psychothérapeute.
+De nombreux outils similaires et de plus en plus évolués ont été développés au fil du temps, mais la question de l'usabilité pour un utilisateur lambda se pose toujours.
+Bien que le Test de Turing\footfullcite{turing1950computing} permette de déterminer si un système émule parfaitement un comportement humain dans une discussion, il est encore nécessaire de définir si un utilisateur est à l'aise à l'idée de dialoguer naturellement avec un ordinateur.
+Il sera donc intéressant de prendre ceci en compte lors de la phase de tests afin de tenter de déterminer si les utilisateurs seront satisfaits de la solution mise en place. \\
+
+Enfin, ce mémoire sera pluridisciplinaire et me permettra d'appliquer et d'approfondir des compétences acquises dans différents cours de mon cursus, principalement les bases de données, l'ingénierie linguistique et la programmation. 
 \newpage
 \section{Table des matières commentée du mémoire}
 Bien que sujette à modifications lors de la réalisation du mémoire, cette table des matières donne un aperçu de la manière dont le travail sera organisé.
 \subsection{Introduction}
 L'introduction abordera la problématique à laquelle ce mémoire tentera d'apporter une solution.
-Elle sera axée sur une présentation claire et succincte des tenants et aboutissants du projet.
+Elle sera axée sur une présentation claire et succincte des tenants et aboutissants du projet et présentera les objectifs du mémoire ainsi que les hypothèses de travail qui seront posées.
+La portée du mémoire sera aussi clairement définie.
 \subsection{État de l'art}
 Le sujet traité par ce mémoire a déjà été abordé par le passé dans diverses recherches.
 Cet état de l'art résumera les solutions existantes ainsi que les recherches menées en la matière.
-\subsection{Étude des possibilités de requêtes}
-La première étape de la conception du logiciel sera l'étude des possibilités de requêtes que les utilisateurs pourront formuler.
+De par le caractère pluridisciplinaire de ce travail, cet état de l'art sera structuré en plusieurs parties afin d'aborder clairement tous les domaines concernés.
+La partie ingénierie linguiste sera orientée vers l'extraction d'informations et le ``question answering''.
+La partie bases de données quand à elle sera spécifiquement dirigée vers la conception de bases de données ainsi que les rapports entre schéma conceptuel et schéma relationnel.
+Enfin, le coeur de ce mémoire étant l'accès à une base de données via un langage naturel, il sera crucial de considérer les recherches déjà faites en la matière.
+\subsection{Modélisation du domaine d'application choisi}
+La première étape de la conception du logiciel sera de modéliser le domaine d'application afin de créer un schéma conceptuel à partir duquel il sera possible de contraindre le langage naturel sélectionné. Les différents types de requêtes possibles seront alors dérivés de ce schéma qui sera composé de concepts, de propriétés et de relations entre ces concepts. \\
+
+Le schéma, et donc les possibilités de requêtes, sera d'abord simplifié au possible puis enrichi incrémentalement, ce qui enrichira le jeu de questions possibles.
+Ceci permettra de définir les limites dont nous pourrons nous approcher, autant au niveau technique qu'au niveau de discussion avec une machine.
+\subsection{Étude des possibilités de jeux de requêtes}
 Il sera nécessaire de faire des choix sur les possibilités offertes, autant du point de vue vocabulaire que du point de vue syntaxe.
+Ces possibilités seront donc définies par le schéma conceptuel.
 Il pourra être intéressant de proposer deux méthodes d'interrogation de la base de données.
 La première utiliserait un formalisme imposé à l'utilisateur balisant sa requête.
 Ce formalisme devra bien entendu rester extrêmement intuitif pour l'utilisateur afin de ne pas retomber dans les problèmes des systèmes de recherche d'informations classiques.
@@ -127,26 +164,28 @@ La mise en place de ces deux méthodes permettra de comparer les résultats de q
 
 Il sera nécessaire aussi de bien définir les types d'entités que l'on désirera reconnaître dans les questions.
 Les noms de films, de personnes et années semblent être une bonne base. 
-\subsection{De la base de données}
+\subsection{Construction de la base de données et de son contenu}
 Le manière dont les données seront enregistrées dans la base de données ainsi que les données en elles-mêmes joueront bien évidement un rôle crucial dans la qualité des résultats que le logiciel fournira.
-\subsubsection{Conception l'architecture de la base de données}
-Une fois que les possibilités de requêtes seront clairement définies, il sera possible et nécessaire d'architecturer la base de données en fonction d'elles afin de permettre une recherche de résultats la plus performante possible.
+\subsubsection{Conception du schéma relationnel de la base de données}
+Une fois le schéma conceptuel et les possibilités de jeux de requêtes clairement définis, il sera possible et nécessaire de concevoir le schéma relationnel de la base de données en fonction de ce schéma conceptuel afin de permettre une recherche de résultats la plus performante et cohérente possible.
 L'architecture de la base de données fera donc l'objet d'une étude réfléchie et justifiée.
 \subsubsection{Collecte et insertion de données dans la base de données}
 Afin de pouvoir évaluer la qualité des résultats renvoyés par le logiciel, il faudra peupler celle ci avec des données de qualité concernant le domaine d'application.
 L'Internet Movie DataBase\footnote{\url{http://imdb.com}} offre une possibilité de récupération de données structurées.
 Ceci pourra être une bonne source de données tout en gardant à l'esprit que les sites collaboratifs tels que celui ci ne peuvent être considérés comme parfaits. \\
 
-Une fois les données collectées, il faudra les insérer dans la base de données de manière cohérente avec l'architecture de celle-ci.
+Une fois les données collectées, il faudra les insérer dans la base de données de manière automatisée et cohérente avec l'architecture de celle-ci.
 \subsection{Des requêtes et réponses}
 \subsubsection{Conception de l'analyse des requêtes}
 Point essentiel pour la qualité des résultats, les requêtes des utilisateurs devront être correctement étudiées afin d'extraire toutes les informations utiles et uniquement elles.
 Diverses techniques d'ingénierie linguistique existent à cette fin, il faudra donc sélectionner la plus appropriée. 
-\subsubsection{Conception de la recherche de la meilleure réponse}
-Une fois les informations utiles extraites de la question, il faudra pouvoir obtenir la réponse la plus adaptée possible dans les informations contenues dans la base de données.
-Cette recherche de la meilleure réponse devra elle aussi être soigneusement réfléchie afin de garantir une qualité de résultats la plus élevée possible.
+\subsubsection{Conception de la recherche de réponse}
+Une fois les informations utiles extraites de la question, il faudra pouvoir obtenir la réponse dans les informations contenues dans la base de données.
+Cette recherche devra elle aussi être soigneusement réfléchie afin de garantir une qualité de résultats la plus élevée possible.
 \subsubsection{Conception de la méthode de formulation de réponses}
 Enfin, il faudra être capable de renvoyer une réponse claire et compréhensible à l'utilisateur afin d'éviter qu'il ne se méprenne sur sa validité.
+Il sera toutefois important de ne pas négliger la réflexion sur la structuration de la réponse.
+Dans certains cas, une réponse structurée sous forme de liste ou de résultat direct non formulé sous forme de phrase pourra mieux convenir à l'utilisateur.
 \subsection{Implémentation}
 L'implémentation du logiciel sera l'élément central de ce mémoire afin de concrétiser toute l'étude théorique précédemment réalisée.
 Elle sera à priori réalisée en utilisant au moins deux langages de programmation différents.
@@ -163,11 +202,16 @@ Le reste de l'implémentation sera à priori réalisé à l'aide du langage Java
 \subsection{Évaluation des résultats}
 Lorsque le logiciel sera implémenté et fonctionnel, une phase de test sera effectuée afin de déterminer si les résultats renvoyés aux utilisateurs sont pertinents par rapport aux attentes et répondent clairement aux requêtes.
 \subsubsection{Méthode}
-La méthode de tests du logiciel sera précautionneusement conçue afin de refléter au mieux la pertinence générale des réponses. 
+La méthode de tests du logiciel sera précautionneusement conçue afin de refléter au mieux la pertinence générale des réponses. Plusieurs éléments seront mesurés. Tout d'abord, la validité des résultats renvoyés sera évidement mesurée, tout comme la couverture du domaine par le jeu de requêtes. Ensuite, une comparaison avec les résultats des requêtes équivalentes formulées directement en SQL sera effectuée. Comme défini précédemment, l'usabilité du logiciel sera l'objet d'une étude attentive. Enfin les performances techniques du systèmes seront évaluées, ce qui permettra par exemple de déterminer si les technologies choisies ainsi que les méthodes d'implémentation étaient pertinentes.
+Il est important de souligner que la langue anglaise ayant été choisie, il est évident qu'il faudra s'assurer que tous les utilisateurs du panel de testeurs maîtrisent cette langue. \\
+
+La méthode de tests sera donc établie afin de mesurer ces différents paramètres.
 \subsubsection{Résultats}
 Ces résultats de la phase de tests seront naturellement d'une importance cruciale : ils permettront de déterminer si les choix effectués tout au long du mémoire et l'implémentation déployée ont permis de mettre en place une solution répondant positivement à la question de recherche.
 \subsection{Conclusion}
-
+Chapitre final du mémoire, la conclusion sera une critique de l'approche suivie ainsi que du choix des hypothèses de départ et de l'évolution de celles-ci.
+En véritable réponse à l'introduction, nous rappellerons la démarche et verrons si les objectifs de base sont atteints, en justifiant soigneusement toute réponse positive ou négative.
+Les forces et faiblesses de la démarche établie seront exposées afin de déterminer ce qui pourrait être modifié à l'avenir.
 \newpage
 \section{Bibliographie commentée}
 Les éléments bibliographiques repris ci-dessous sont ici organisés par thèmes afin de simplifier les commentaires et d'éviter une redondance inutiles de ceux ci. La bibliographie complète et structurée est disponible dans la \autoref{sec:bibliography}.
@@ -295,3 +339,17 @@ Coeur du sujet de ce mémoire, le thème des interactions avec des bases de donn
 
 
 \end{document}
+
+
+% LocalWords pour ispell
+% LocalWords:  SQL Structured Query Language non-informaticien ciblé Eliza NLTK
+% LocalWords:  humains-ordinateurs weizenbaum eliza Weizenbaum l'usabilité sql
+% LocalWords:  Turing turing computing answering incrémentalement L'Internet
+% LocalWords:  Movie DataBase collaboratifs Implémentation L'implémentation liu
+% LocalWords:  toolkit ré-implémenter OpenCalais l'implémentation open-source
+% LocalWords:  DB-Main d'implémentation bibliography hainaut jurafsky katz role
+% LocalWords:  exploiting soderland learning appelt cardie empirical huffman
+% LocalWords:  natural external ravichandran reder strategy lutz programming
+% LocalWords:  learnpythonthehardway nlpwithpython head deitel Samsonova owda
+% LocalWords:  waltz english sneiders automated frank constructing
+% LocalWords:  androutsopoulos
