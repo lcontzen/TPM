@@ -88,21 +88,21 @@
 
 \section{Introduction}
 L'évolution des technologies depuis plusieurs décennies, et l'avènement du Web en particulier, ont permis l'enregistrement et la mise à disposition d'une quantité colossale d'informations.
-L'expression \textit{big data} est utilisée pour désigner ces ensembles de données d'une taille telle que leur traitement par les moyens classique devient presque impossible.
+L'expression \textit{big data} est utilisée pour désigner ces ensembles de données d'une taille telle que leur traitement par les moyens classiques devient presque impossible.
 Ce phénomène impose une nouvelle réflexion à propos de tout ce qui est lié à ces données, telles que les méthodes de traitement de données, de recherche d'informations, de stockage de ces données, et bien d'autres.
 La production toujours plus importante de contenu par des utilisateurs ainsi que le succès toujours croissant des réseaux sociaux laissent présager que ce phénomène va encore s'intensifier dans les années à venir, créant toujours plus d'informations à manipuler le plus rapidement et efficacement possible.\\
 
 Ces informations sont, depuis la création des systèmes d'information, organisées et enregistrées dans des bases de données.
-Il existe différents paradigmes dans ce domaine, mais le modèle le plus utilisé actuellement est le modèle relationnel.
+Il existe divers paradigmes dans ce domaine, mais le modèle le plus utilisé actuellement est le modèle relationnel.
 Le langage de référence afin d'interagir avec une base de données suivant ce modèle est le SQL\footnote{Structured Query Language}.
 Ce langage est extrêmement puissant mais impose beaucoup de rigueur ainsi qu'une connaissance complète de la structure de la base de données avec laquelle l'on désire interférer.
 Cette complexité, couplée au fait que le SQL permet aussi de modifier les données, a amené à la création de dispositifs intermédiaires permettant de rechercher des informations.
 Ces dispositifs nécessitent fréquemment l'utilisation d'un langage contrôlé au vocabulaire précis ou la structuration très précise de la requête à l'aide d'opérateurs booléens. 
 Ceci n'est pas à la portée de tout un chacun sans formation préalable et un utilisateur non-initié confronté à ces obligations se retrouvera désorienté et ne parviendra pas à obtenir l'information qu'il recherche. 
-Une fois la requête correctement formulée, il faut ensuite réussir à comprendre les résultats renvoyés par le système d'information.
+Une fois la requête correctement formulée, il faut ensuite réussir à comprendre les résultats renvoyés par le système.
 Cette étape dans l'obtention d'une information peut parfois se révéler tout aussi compliquée que la précédente.
 Effectuer une recherche dans un système d'information contenant une grande quantité de données est donc souvent une opération complexe lorsqu'un résultat précis et compréhensible est désiré.
-Avoir la possibilité de dialoguer de manière simplifiée avec un système d'information permettrait à un large public non-informaticien d'accéder aux informations qu'il contient. \\
+Avoir la possibilité de dialoguer de manière simplifiée avec un système d'information permettrait à un large public non-informaticien d'accéder aux informations contenues dans ce système. \\
 
 Nous sommes donc en présence d'une quantité massive d'informations pour laquelle nous avons besoin d'un support d'accès différent du support de prédilection actuel, le SQL. 
 Le langage naturel apparaît ici comme un support de choix.
@@ -111,24 +111,25 @@ Il est évident que ceci est applicable aussi bien pour la recherche d'informati
 C'est pourquoi un choix fut nécessaire et nous nous concentrerons sur la recherche d'informations car cette opération est la plus utile au plus grand nombre d'utilisateurs. \\
 
 A l'instar du choix de l'opération offerte à l'utilisateur, un choix concernant la langue doit être fait.
-En effet, les langues existant actuellement sont fondamentalement différentes à plusieurs points de vues (orthographe, syntaxe, ...) et une question posée dans une langue ne pourra pas être automatique analysée de la même manière lorsque posée dans une autre langue.
-L'essentiel des recherches en ingénierie linguistique étant faites en utilisant l'anglais comme langage naturel, nous avons décidé d'utiliser l'anglais comme langue dans laquelle les utilisateurs dialogueront avec le système.
-Ce choix est justifié aussi par la quantité d'informations disponibles en anglais sur Internet pour peupler la base de données. \\
+En effet, les langues actuelles sont fondamentalement différentes à plusieurs points de vues (orthographe, syntaxe, ...) et une question posée dans une langue ne pourra pas être automatique analysée de la même manière lorsque posée dans une autre langue.
+L'essentiel des recherches en ingénierie linguistique étant effectuées en utilisant l'anglais comme langage naturel, nous avons décidé d'utiliser l'anglais comme langue dans laquelle les utilisateurs dialogueront avec le système.
+Ce choix est justifié aussi par la quantité d'informations disponibles en anglais sur Internet pour peupler la base de données.
+Bien entendu, le système que nous proposerons ici sera adaptable à d'autres langues. \\
 
 Afin de rester dans un cadre ciblé et précis, le domaine d'application de l'édition, et plus particulièrement des films, a été choisi.
 Ce choix est motivé par plusieurs faits.
 Tout d'abord, les informations disponibles sur le sujet sont nombreuses tout en restant dans un cadre précis et structuré.
 Ensuite, ce domaine est connu d'un grand nombre, ce qui permettra de trouver aisément un panel d'utilisateurs pour la phase de tests.
 Enfin, du fait de mon intérêt personnel pour ce sujet, des connaissances sont déjà acquises.
-Il ne s'agira donc pas de découvrir la matière, mais bien de l'approfondir, ce qui, en termes de motivation et de compétences, représente un avantage non négligeable. \\
+Il ne s'agira donc pas de découvrir le domaine mais bien de l'approfondir, ce qui, en termes de motivation et de compétences, représente un avantage non négligeable. \\
 
 L'objectif du mémoire faisant ici l'objet de ce travail préparatoire est donc d'implémenter un logiciel ayant pour but de permettre à un utilisateur de poser une question en langage naturel ou dans un langage possédant une syntaxe et une structure beaucoup moins contraignantes et beaucoup plus intuitives que celles des langages contrôlés actuellement existants et d'obtenir, s'il en existe une, une réponse en langage naturel.
 Ceci a pour volonté d'essayer de déterminer s'il est possible de dialoguer de manière conceptuelle avec une base de données, sous les hypothèses et choix qui seront faits tout au long de ce mémoire. \\
 
-Ce mémoire permettra aussi une réflexion sur les interactions humains-ordinateurs.
-Depuis les débuts de l'informatique des outils ont étés successivement créés en suivant les évolution des technologies et des recherches en traitement de langages naturels afin de permettre à un utilisateur de dialoguer le plus naturellement possible avec un ordinateur.
-Le premier exemple connu de tel système fût le programme Eliza\footfullcite{weizenbaum1966eliza} développé par J. Weizenbaum de 1946 à 1966 offrant une simulation de psychothérapeute.
-De nombreux outils similaires et de plus en plus évolués ont été développés au fil du temps, mais la question de l'usabilité pour un utilisateur lambda se pose toujours.
+Ce mémoire permettra aussi une réflexion sur les interactions hommes-machines.
+Depuis les débuts de l'informatique, des outils ont étés successivement créés en suivant les évolutions des technologies et des recherches en traitement de langages naturels afin de permettre à un utilisateur de dialoguer le plus naturellement possible avec un ordinateur.
+Le premier exemple connu d'un tel système fût le programme Eliza\footfullcite{weizenbaum1966eliza} développé par J. Weizenbaum de 1946 à 1966 offrant une simulation de psychothérapeute.
+De nombreux outils similaires et de plus en plus évolués ont été développés au fil du temps, mais la question de l'utilisabilité pour un utilisateur lambda se pose toujours.
 Bien que le Test de Turing\footfullcite{turing1950computing} permette de déterminer si un système émule parfaitement un comportement humain dans une discussion, il est encore nécessaire de définir si un utilisateur est à l'aise à l'idée de dialoguer naturellement avec un ordinateur.
 Il sera donc intéressant de prendre ceci en compte lors de la phase de tests afin de tenter de déterminer si les utilisateurs seront satisfaits de la solution mise en place. \\
 
@@ -139,12 +140,12 @@ Bien que sujette à modifications lors de la réalisation du mémoire, cette tab
 \subsection{Introduction}
 L'introduction abordera la problématique à laquelle ce mémoire tentera d'apporter une solution.
 Elle sera axée sur une présentation claire et succincte des tenants et aboutissants du projet et présentera les objectifs du mémoire ainsi que les hypothèses de travail qui seront posées.
-La portée du mémoire sera aussi clairement définie.
+La portée du mémoire et ses limites seront aussi clairement définies.
 \subsection{État de l'art}
 Le sujet traité par ce mémoire a déjà été abordé par le passé dans diverses recherches.
 Cet état de l'art résumera les solutions existantes ainsi que les recherches menées en la matière.
 De par le caractère pluridisciplinaire de ce travail, cet état de l'art sera structuré en plusieurs parties afin d'aborder clairement tous les domaines concernés.
-La partie ingénierie linguiste sera orientée vers l'extraction d'informations et le ``question answering''.
+La partie ingénierie linguistique sera orientée vers l'extraction d'informations et le \textit{question answering}.
 La partie bases de données quand à elle sera spécifiquement dirigée vers la conception de bases de données ainsi que les rapports entre schéma conceptuel et schéma relationnel.
 Enfin, le coeur de ce mémoire étant l'accès à une base de données via un langage naturel, il sera crucial de considérer les recherches déjà faites en la matière.
 \subsection{Modélisation du domaine d'application choisi}
@@ -192,7 +193,7 @@ Elle sera à priori réalisée en utilisant au moins deux langages de programmat
 Pour tout ce qui est lié à l'ingénierie linguistique le Python est actuellement le langage de référence dans la communauté de développeurs d'outils de traitement de langages naturels.
 Le toolkit NLTK\footnote{\url{http://www.nltk.org/}} jouit d'une excellente réputation et fournit énormément d'outils facilitant le développement.
 Il a toutefois diverses faiblesses telles que sa lourdeur et sa difficulté d'utilisation dans un environnement non totalement contrôlé.
-De plus, la plupart des fonctionnalités fournies par NLTK ne sont pas très compliquées à ré-implémenter soi-même.
+De plus, la plupart des fonctionnalités fournies par NLTK pourraient être ré-implémentées individuellement.
 Le choix de l'utilisation ou non de ce toolkit sera donc à réfléchir soigneusement. \\
 
 Il pourra être intéressant d'utiliser le service OpenCalais\footnote{\url{http://viewer.opencalais.com/}} afin de vérifier les résultats de l'analyse des requêtes de l'implémentation ici effectuée.
@@ -202,28 +203,29 @@ Le reste de l'implémentation sera à priori réalisé à l'aide du langage Java
 \subsection{Évaluation des résultats}
 Lorsque le logiciel sera implémenté et fonctionnel, une phase de test sera effectuée afin de déterminer si les résultats renvoyés aux utilisateurs sont pertinents par rapport aux attentes et répondent clairement aux requêtes.
 \subsubsection{Méthode}
-La méthode de tests du logiciel sera précautionneusement conçue afin de refléter au mieux la pertinence générale des réponses.
+La méthode de test du logiciel sera précautionneusement conçue afin de refléter au mieux la pertinence générale des réponses.
 Plusieurs éléments seront mesurés.
 Tout d'abord, la validité des résultats renvoyés sera évidement mesurée, tout comme la couverture du domaine par le jeu de requêtes.
 Ensuite, une comparaison avec les résultats des requêtes équivalentes formulées directement en SQL sera effectuée.
-Comme défini précédemment, l'usabilité du logiciel sera l'objet d'une étude attentive.
+Comme défini précédemment, l'utilisabilité du logiciel sera l'objet d'une étude attentive.
 Enfin les performances techniques du systèmes seront évaluées, ce qui permettra par exemple de déterminer si les technologies choisies ainsi que les méthodes d'implémentation étaient pertinentes.
-Il est important de souligner que la langue anglaise ayant été choisie, il est évident qu'il faudra s'assurer que tous les utilisateurs du panel de testeurs maîtrisent cette langue. \\
+Il est important de souligner que la langue anglaise ayant été choisie, il est évident qu'il faudra s'assurer que tous les utilisateurs du panel de testeurs maîtrisent les finesses de cette langue. \\
 
-La méthode de tests sera donc établie afin de mesurer ces différents paramètres.
+La méthode de test sera donc établie afin de mesurer ces différents paramètres.
 \subsubsection{Résultats}
-Ces résultats de la phase de tests seront naturellement d'une importance cruciale : ils permettront de déterminer si les choix effectués tout au long du mémoire et l'implémentation déployée ont permis de mettre en place une solution répondant positivement à la question de recherche.
+Ces résultats de la phase de test seront naturellement d'une importance cruciale : ils permettront de déterminer si les choix effectués tout au long du mémoire et l'implémentation déployée ont permis de mettre en place une solution répondant positivement à la question de recherche.
 \subsection{Conclusion}
 Chapitre final du mémoire, la conclusion sera une critique de l'approche suivie ainsi que du choix des hypothèses de départ et de l'évolution de celles-ci.
 En véritable réponse à l'introduction, nous rappellerons la démarche et verrons si les objectifs de base sont atteints, en justifiant soigneusement toute réponse positive ou négative.
-Les forces et faiblesses de la démarche établie seront exposées afin de déterminer ce qui pourrait être modifié à l'avenir.
+Ceci permettra d'analyser la validité des hypothèses de travail.
+Les forces et faiblesses de la démarche établie seront exposées afin de déterminer ce qui pourrait être modifié ou entrepris à l'avenir. 
 \newpage
 \section{Bibliographie commentée}
 La bibliographie présentée ici est forcément incomplète par rapport à celle que contiendra ce mémoire.
 Elle donne toutefois déjà un aperçu des différents domaines qui seront présentés et des sources qui seront utilisées.
 Afin d'enrichir cette bibliographie, j'effectuerai des recherches bibliographiques approfondies, autant dans les bases de données documentaires auxquelles l'Université nous permet l'accès que dans d'autres telles que l'ACM.
 Je n'hésiterai pas non plus à entrer en contact avec des personnes ayant déjà fait des recherches liées au sujet de ce mémoire en cas de besoin d'informations complémentaires, ainsi qu'à consulter les notes de diverses conférences telles que ER, VLDB et NLP Conferences. \\
-Les éléments bibliographiques repris ci-dessous sont ici organisés par thèmes afin de simplifier les commentaires et d'éviter une redondance inutiles de ceux ci. La bibliographie complète et structurée est disponible dans la \autoref{sec:bibliography}.
+Les éléments bibliographiques repris ci-dessous sont ici organisés par thèmes afin de simplifier les commentaires et d'éviter une redondance inutile de ceux ci. La bibliographie complète et structurée est disponible dans la \autoref{sec:bibliography}.
 \subsection{Bases de données}
 Comme énoncé précédemment, une bonne architecture de la base de données sera nécessaire à la bonne réalisation du mémoire. \\ 
 \noindent\textbf{Références :}
@@ -234,14 +236,14 @@ Comme énoncé précédemment, une bonne architecture de la base de données ser
     Livre présentant les bonnes pratiques en SQL.
 \end{itemize}
 \subsection{Ingénierie linguistique}
-L'ingénierie linguistique est un domaine vaste dont plusieurs sous domaines nous intéresseront. 
+L'ingénierie linguistique est un domaine vaste dont plusieurs sous-domaines nous intéresseront. 
 \subsubsection*{Général}
 \noindent\textbf{Références :}
 \begin{itemize}
   \item \prettycite{jurafsky2009speech} \\
     Livre de référence pour le cours d'ingénierie linguistique de notre cursus.
   \item \prettycite{katz1988exploiting} \\
-    Article présentant les recherches faites dans le cadre du développement des outils lexicaux pour le projet START du MIT.
+    Article présentant les recherches faites dans le cadre du développement des outils lexicaux pour le projet START\footnote{\url{http://start.csail.mit.edu/}} du Massachusetts Institute of Technology.
 \end{itemize}
 \subsubsection*{Information Extraction}
 L'extraction d'informations permettra, comme le nom de ce domaine le laisse présager, d'extraire les informations utiles des requêtes des utilisateurs. \\
@@ -252,7 +254,7 @@ L'extraction d'informations permettra, comme le nom de ce domaine le laisse pré
   \item \prettycite{appelt1999introduction} \\
     Article introduisant le domaine de l'extraction d'information, en présentant les problèmes visés par le domaine, l'état des recherches le concernant et les différentes approches existant.
   \item \prettycite{cardie1997empirical} \\
-    Article présentant l'utilisation de méthodes empiriques utilisant du machine-learning dans le cadre de l'extraction d'information
+    Article présentant l'utilisation de méthodes empiriques utilisant du \textit{machine-learning} dans le cadre de l'extraction d'information
   \item \prettycite{huffman1996learning} \\
     Article présentant un système autonome d'extraction de \textit{patterns} directement depuis des exemples de textes.
 \end{itemize}
@@ -263,13 +265,13 @@ La formulation des réponses récupérées dans la base de données sera elle au
   \item \prettycite{katz2006natural} \\
     Article présentant les stratégies et les résultats de l'utilisation d'annotations du langage naturel dans le système START.
   \item \prettycite{katz2005external} \\
-    Article présentant l'utilisation de sources externes de connaissances dans le cadre de divers projets de question answering.
+    Article présentant l'utilisation de sources externes de connaissances dans le cadre de divers projets de \textit{question answering}.
   \item \prettycite{lin2003role} \\
-    Article présentant les résultats d'une étude sur les préférences d'utilisateurs en termes de réponses dans le cadre du question answering, ainsi que les bonnes pratiques dans ce domaine.
+    Article présentant les résultats d'une étude sur les préférences d'utilisateurs en termes de réponses dans le cadre du \textit{question answering}, ainsi que les bonnes pratiques dans ce domaine.
   \item \prettycite{ravichandran2002learning} \\
-    Article présentant l'utilisation automatisée de patterns dans les textes pour du question answering dans des domaines ouverts.
+    Article présentant l'utilisation automatisée de \textit{patterns} dans les textes pour du question answering dans des domaines ouverts.
   \item \prettycite{reder1987strategy} \\
-    Article présentant diverses stratégies dans le choix d'une réponse dans le cadre d'un logiciel de question answering ainsi que leurs propriétés respectives.
+    Article présentant diverses stratégies dans le choix d'une réponse dans le cadre d'un logiciel de \textit{question answering} ainsi que leurs propriétés respectives.
 \end{itemize}
 \subsection{Interactions avec des bases de données à l'aide de langage naturel}
 Coeur du sujet de ce mémoire, le thème des interactions avec des bases de données à l'aide de langage naturel a déjà été l'objet de recherches variées qu'il sera utile de consulter. \\
@@ -292,7 +294,7 @@ Coeur du sujet de ce mémoire, le thème des interactions avec des bases de donn
   \item \prettycite{li2006constructing} \\
     Article présentant la construction d'un langage d'interrogation d'une base de données XML.
   \item \prettycite{androutsopoulos1995natural} \\
-    Article présentant les interfaces en langages naturels pour bases de données.
+    Article présentant des interfaces en langages naturels pour bases de données.
 \end{itemize}
 \subsection{Programmation}
 L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir obtenir des résultats concrets pouvant être analysés. Les langages de programmation allant être utilisés étant le Python et le Java, nous utiliserons diverses références concernant ces deux langages précis. Il est à noter que ces références seront plus utiles afin de mettre en pratique divers concepts que pour la recherche sur le sujet en lui même. \\
@@ -315,28 +317,29 @@ L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir
   \midrule
   \large{Novembre 2012} & \begin{itemize}
     \item État de l'art et analyse de l'existant
-    \item Définition des possibilités de requêtes
-    \item Conception théorique de la base de données en accord avec ces possibilités de requêtes
+    \item Modélisation du domaine d'application choisi
+    \item Étude des possibilités de jeux de requêtes
+    \item Conception du schéma relationnel de la base de données
     \item Étude de la collecte et de l'insertion des données dans la base de données
   \end{itemize}
   \\
   \large{Mars 2013} & \begin{itemize}
-    \item Analyse des requêtes
-    \item Conception de la recherche de la meilleure réponse
-    \item Conception de la méthode de formulation des réponses
     \item Création de la base de données
     \item Collecte et insertion des données
+    \item Analyse des requêtes
+    \item Conception de la recherche de la réponse
+    \item Conception de la méthode de formulation des réponses
     \item Implémentation en cours
+    \item Conception de la phase de test
   \end{itemize}
   \\
   \large{Avril 2013} & \begin{itemize}
     \item Implémentation terminée
-    \item Conception de la phase de tests
-    \item Phase de tests
+    \item Phase de test
     \item Analyse des résultats de la phase de tests
   \end{itemize}
   \\
-  \large{15 Mai 2012} & Remise du mémoire. \\
+  \large{15 Mai 2013} & Remise du mémoire. \\
   \bottomrule
 \end{tabular}
 
@@ -382,4 +385,6 @@ L'aspect programmation du mémoire est d'une importance capitale afin de pouvoir
 % LocalWords:  learnpythonthehardway nlpwithpython head deitel Samsonova owda
 % LocalWords:  waltz english sneiders automated frank constructing l'ACM VLDB
 % LocalWords:  androutsopoulos NLP Conferences semi-structurées START mapping
-% LocalWords:  machine-learning XML
+% LocalWords:  machine-learning XML Bruxelles Laurent Contzen Anthony Cleve Web
+% LocalWords:  l'Information big BrickRed FIXME hommes-machines l'utilisabilité
+% LocalWords:  ré-implémentées
