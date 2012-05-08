@@ -12,10 +12,10 @@ slides.pdf: slides.tex
 	@pdflatex $<
 	@pdflatex $<
 
-tpm.pdf: %.tex %.aux
+tpm.pdf: tpm.tex tpm.aux
 	@echo [LATEX] $< -\> $@
 	@pdflatex $<
-	@bibtex $*.aux
+	@bibtex tpm.aux
 	@pdflatex $<
 	@pdflatex $<
 clean:
