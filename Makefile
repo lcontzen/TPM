@@ -1,12 +1,22 @@
 PDF = tpm.pdf
+SLIDES = slides.pdf
 
-all: $(PDF)
+all: $(PDF) $(SLIDES)
 
-%.pdf: %.tex %.aux
+pdf: $(PDF)
+
+slides: $(SLIDES)
+
+slides.pdf: slides.tex
+	@echo [LATEX] $< -\> $@
+	@pdflatex $<
+	@pdflatex $<
+
+tpm.pdf: %.tex %.aux
 	@echo [LATEX] $< -\> $@
 	@pdflatex $<
 	@bibtex $*.aux
 	@pdflatex $<
 	@pdflatex $<
 clean:
-	rm $(PDF)
+	rm $(PDF) $(SLIDES)
