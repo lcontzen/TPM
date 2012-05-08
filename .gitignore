@@ -6,3 +6,7 @@
 *.toc
 tpm-blx.bib
 tpm.pdf
+slides.aux
+*.nav
+*.snm
+slides.pdf
