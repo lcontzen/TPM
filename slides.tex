@@ -1,7 +1,7 @@
 %% \documentclass[xcolor=dvipsnames]{beamer}
 \documentclass[pdf]{beamer}
-\mode<presentation>{\usetheme{Darmstadt}
-  \usecolortheme{seagull}}
+\mode<presentation>{\usetheme{Warsaw}}
+%  \usecolortheme{seagull}}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
@@ -14,4 +14,103 @@
 
 \begin{document}
 \frame{\titlepage}
+
+\frame{\tableofcontents}
+\section{Introduction}
+\begin{frame}
+  \begin{center}
+    \structure{\Huge \insertsection}
+  \end{center}
+\end{frame}
+\subsection{Intérêt du sujet}
+\frame{\frametitle{\insertsubsection}
+  \begin{itemize}
+  \item<1-> Multidisciplinaire
+    \begin{itemize}
+    \item<2-> Bases de données
+    \item<3-> Ingénierie Linguistique
+    \item<4-> Programmation
+    \item<5-> Information et Société
+    \end{itemize}
+  \item<6-> Grandes possibilités d'applications
+  \end{itemize}
+}
+
+\subsection{Domaine d'application choisi}
+\frame{\frametitle{\insertsubsection}
+  \begin{itemize}
+  \item<1-> Domaine de l'édition, plus particulièrement des films
+  \item<2-> Beaucoup de données existantes
+  \item<3-> Données semi-structurées
+  \item<4-> Domaine répandu
+  \item<5-> Possibilités de recruter des connaisseurs pour la phase de test
+  \end{itemize}
+}
+
+\section{Méthodologie}
+\begin{frame}
+  \begin{center}
+    \structure{\Huge \insertsection}
+  \end{center}
+\end{frame}
+
+\frame{\frametitle{\insertsection}
+  \begin{itemize}
+  \item<1-> Étude des travaux déjà effectués dans les différents domaines
+  \item<2-> Mise en relation des différents aspects du mémoire
+  \item<3-> Modélisation du modèle d'application et étude des possibilités de jeux de requêtes
+  \item<3-> Implémentation
+  \item<4-> Phase de test
+  \item<5-> Analyse approfondie des résultats selon différents points de vue
+  \end{itemize}
+}
+
+%% \section{Table des matières}
+%% \begin{frame}
+%%   \begin{center}
+%%     \structure{\Huge \insertsection}
+%%   \end{center}
+%% \end{frame}
+
+%% \frame{\frametitle{\insertsection}
+%%   \begin{itemize}
+%%   \item<1-> Introduction
+%%   \item<2-> État de l'art
+%%   \item<3-> Modélisation du domaine d’application choisi
+%%   \item<4-> Étude des possibilités de jeux de requêtes
+%%   \item<5-> Construction de la base de données et de son contenu 
+%%     \begin{itemize}
+%%     \item<6-> Conception du schéma relationnel de la base de données 
+%%     \item<7-> Collecte et insertion de données dans la base de données
+%%     \end{itemize}
+%%   \end{itemize}
+%% }
+
+%% \frame{\frametitle{\insertsection ~- Suite}
+%%   \begin{itemize}
+%%   \item<1-> Conception des requêtes et des réponses
+%%     \begin{itemize}
+%%     \item<2-> Conception de l’analyse des requêtes
+%%     \item<3-> Conception de la recherche de réponse
+%%     \item<4-> Conception de la méthode de formulation de réponses
+%%     \end{itemize}
+%%   \item<5-> Implémentation
+%%   \item<6-> Évaluation des résultats
+%%     \begin{itemize}
+%%     \item<7-> Méthode
+%%     \item<8-> Résultats
+%%     \end{itemize}
+%%   \item<9-> Conclusion
+%%   \end{itemize}
+%% }
+
+\section{Conclusion}
+\begin{frame}
+  \begin{center}
+    \structure{\Huge \insertsection}
+  \end{center}
+\end{frame}
+
 \end{document}
+
+% LocalWords:  semi-structurées Implémentation
